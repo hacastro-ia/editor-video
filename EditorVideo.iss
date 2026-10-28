@@ -1,9 +1,14 @@
 ; Script para Inno Setup — Editor de Video
 ; Requisitos: Inno Setup 6 (https://jrsoftware.org/isinfo.php) — descargar el instalador "innosetup-6-*.exe"
 
+; La versión se puede pasar al compilar:  ISCC.exe /DAppVersion=1.1.0 EditorVideo.iss
+#ifndef AppVersion
+  #define AppVersion "1.0.0"
+#endif
+
 [Setup]
 AppName=Editor de Video
-AppVersion=1.0.0
+AppVersion={#AppVersion}
 DefaultDirName={autopf}\EditorVideo
 DefaultGroupName=Editor Video
 OutputBaseFilename=EditorVideo-Setup

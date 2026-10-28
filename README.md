@@ -61,14 +61,33 @@ Instalador: compilar `EditorVideo.iss` con Inno Setup 6 (el script está en la r
 
 Guía completa: [`GUIA_INSTALACION.md`](GUIA_INSTALACION.md)
 
+### Publicar una versión nueva
+
+Con todo ya configurado (git + Inno Setup 6), un solo comando compila y publica el Release:
+
+```powershell
+.\publicar_release.ps1 -Version 1.1 -DryRun     # solo comprueba requisitos
+.\publicar_release.ps1 -Version 1.1             # compila y publica v1.1
+```
+
+Hace todo: compila el exe, compila el instalador, crea la Release en GitHub con los dos binarios y la publica. Si quieres notas propias, pásale un archivo Markdown con `-Notas .\notas_v1.1.md`. Usa las credenciales de git ya guardadas, no hace falta pegar ningún token.
+
 ## ⚠️ Notas
 
 - Versión beta en pruebas: puede haber bugs. Si encuentras uno, abre un [Issue](https://github.com/hacastro-ia/editor-video/issues).
 - Los modelos de IA y la biblioteca de imágenes se guardan en `%LOCALAPPDATA%\EditorVideo\` (`models\` y `biblioteca\`), así funciona aunque el programa esté instalado en `Program Files`.
 - En la versión instalada, añade tus imágenes desde **Salida → Herramientas → «Biblioteca de imágenes…»**.
 
-## 📄 Licencias
+## 📄 Licencia
 
-- Motor propio: licencia del autor.
-- YOLO (Ultralytics): AGPL — usar bajo esa licencia.
-- PyTorch / OpenCV / FFmpeg: licencias BSD/LGPL correspondientes.
+[![Licencia: AGPL-3.0](https://img.shields.io/badge/licencia-AGPL--3.0-blue.svg)](LICENSE)
+
+Este proyecto se distribuye bajo la **GNU Affero General Public License v3.0** — texto completo en [`LICENSE`](LICENSE).
+
+El motivo principal es **Ultralytics YOLO**, que es AGPL-3.0: al distribuir un binario que lo incluye, el conjunto debe publicarse bajo la misma licencia. En la práctica puedes:
+
+- ✅ Usarlo gratis, para uso personal o comercial.
+- ✅ Modificarlo y redistribuirlo.
+- ⚠️ Si lo modificas y lo ofreces como servicio o programa, debes publicar el código fuente con tus cambios bajo AGPL-3.0.
+
+Otras dependencias mantienen sus propias licencias: PyTorch (BSD-3), OpenCV (Apache 2.0), FFmpeg (LGPL/GPL según la build), Python/Tkinter (PSF).
