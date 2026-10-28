@@ -2,6 +2,8 @@
 
 **Editor de escritorio para crear visuales y editar video en tiempo real**: una cadena de **48 efectos apilables** con controles finos, modulación reactiva al audio, cámaras en vivo, ventana de proyección, datamosh (simulado y **real**), CRT/VHS, psicodélicos, detección de personas y objetos (YOLO), censura facial y exportación a MP4.
 
+![Captura del editor: censura de caras con YOLO sobre un video](docs/captura.jpg)
+
 ## ⬇️ Descarga
 
 👉 **[Descargar la última versión](https://github.com/hacastro-ia/editor-video/releases/latest)**
