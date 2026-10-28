@@ -68,17 +68,23 @@ Guía completa: [`GUIA_INSTALACION.md`](GUIA_INSTALACION.md)
 Con todo ya configurado (git + Inno Setup 6), un solo comando compila y publica el Release:
 
 ```powershell
-.\publicar_release.ps1 -Version 1.1 -DryRun     # solo comprueba requisitos
+.\publicar_release.ps1 -Version 1.1 -DryRun     # solo comprueba requisitos y muestra las notas
 .\publicar_release.ps1 -Version 1.1             # compila y publica v1.1
 ```
 
-Hace todo: compila el exe, compila el instalador, crea la Release en GitHub con los dos binarios y la publica. Si quieres notas propias, pásale un archivo Markdown con `-Notas .\notas_v1.1.md`. Usa las credenciales de git ya guardadas, no hace falta pegar ningún token.
+Hace todo: compila el exe, compila el instalador, crea la Release en GitHub con los dos binarios y la publica. Usa las credenciales de git ya guardadas, no hace falta pegar ningún token.
+
+Las notas del Release salen automáticamente de [`CHANGELOG.md`](CHANGELOG.md): escribe los cambios en la sección **[No publicado]** y el script los incluye. Si prefieres notas propias, pásale un archivo Markdown con `-Notas .\notas_v1.1.md`.
 
 ## ⚠️ Notas
 
 - Versión beta en pruebas: puede haber bugs. Si encuentras uno, abre un [Issue](https://github.com/hacastro-ia/editor-video/issues).
 - Los modelos de IA y la biblioteca de imágenes se guardan en `%LOCALAPPDATA%\EditorVideo\` (`models\` y `biblioteca\`), así funciona aunque el programa esté instalado en `Program Files`.
 - En la versión instalada, añade tus imágenes desde **Salida → Herramientas → «Biblioteca de imágenes…»**.
+
+## 📝 Historial de cambios
+
+Todas las versiones y sus cambios están en [`CHANGELOG.md`](CHANGELOG.md).
 
 ## 📄 Licencia
 
