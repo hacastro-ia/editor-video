@@ -1,0 +1,6 @@
+{
+  "python.terminal.activateEnvironment": true,
+  "python.analysis.extraPaths": ["${workspaceFolder}"],
+  "files.exclude": { "**/__pycache__": true },
+  "editor.formatOnSave": false
+}

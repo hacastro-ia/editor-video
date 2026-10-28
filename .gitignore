@@ -1,0 +1,22 @@
+# Entornos y caché
+.venv/
+__pycache__/
+*.pyc
+
+# Artefactos de build
+build/
+dist/
+Output/
+*.spec
+
+# Modelos descargados (se bajan solos al usar la app)
+models/*
+!models/.gitkeep
+
+# Imágenes de la biblioteca (contenido del usuario)
+biblioteca/*
+!biblioteca/LEEME.txt
+
+# Sistema
+.DS_Store
+Thumbs.db

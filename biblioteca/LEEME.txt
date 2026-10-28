@@ -1,0 +1,18 @@
+BIBLIOTECA DE IMÁGENES
+======================
+Cada subcarpeta lleva el nombre de lo que reconoce el programa y dentro van tus imágenes:
+
+    biblioteca/person/      (o "persona")
+    biblioteca/dog/         (o "perro")
+    biblioteca/car/         (o "auto")
+    biblioteca/cup/  biblioteca/chair/  biblioteca/cell phone/ ...
+
+Nombres válidos: los de YOLO en inglés (person, dog, cat, car, bicycle, bottle, cup, chair, laptop,
+cell phone, book, clock, tv, ...) o su equivalente en español.
+
+La carpeta "cualquiera" se usa para los objetos que no tengan carpeta propia.
+Si una clase no tiene imágenes, el efecto usa imágenes abstractas de demostración.
+
+Para descargar una colección de ejemplo desde Wikimedia Commons (necesita internet):
+    python descargar_biblioteca.py            (clases comunes)
+    python descargar_biblioteca.py dog cat --n 20

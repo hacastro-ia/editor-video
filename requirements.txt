@@ -1,0 +1,14 @@
+# Obligatorias
+numpy>=1.23
+opencv-python>=4.8
+Pillow>=9.5
+
+# Recomendadas (cada una activa una función)
+imageio-ffmpeg>=0.4.9     # audio del video, exportación MP4 y datamosh real, sin instalar FFmpeg aparte
+sounddevice>=0.4.6        # sonido en la vista previa y entrada de micrófono
+ultralytics>=8.1          # detección de objetos, personas por puntos, siluetas y biblioteca (YOLO); instala PyTorch
+screeninfo>=0.8           # lista tus monitores para proyectar en el que quieras
+
+# Opcionales
+# pygrabber               # Windows: muestra el nombre real de cada cámara en el selector
+# timm                    # modelo de profundidad MiDaS para la Nube de puntos
