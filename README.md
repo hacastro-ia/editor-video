@@ -4,9 +4,13 @@
 
 ## ⬇️ Descarga
 
+👉 **[Descargar la última versión](https://github.com/hacastro-ia/editor-video/releases/latest)**
+
 ### Windows (recomendado)
-- **Instalador**: `EditorVideo-Setup.exe` → instala en `C:\Program Files\EditorVideo`, crea acceso en Inicio/escritorio y trae desinstalador.
-- **Portable**: `EditorVideo.exe` → solo copiar y ejecutar.
+- **Instalador** (`EditorVideo-Setup.exe`) → instala en `C:\Program Files\EditorVideo`, crea acceso en Inicio/escritorio y trae desinstalador.
+- **Portable** (`EditorVideo.exe`) → solo copiar y ejecutar.
+
+> El ejecutable no está firmado digitalmente: si Windows SmartScreen avisa, pulsa *Más información → Ejecutar de todas formas*.
 
 > Requiere **Windows 10/11 (64 bits)**. Todo el motor (Python + librerías + FFmpeg) va dentro del ejecutable: no instala nada más.
 
@@ -36,8 +40,8 @@
 ## 🔧 Desde el código (desarrollo)
 
 ```bash
-git clone <repo>
-cd editor_video
+git clone https://github.com/hacastro-ia/editor-video.git
+cd editor-video
 python -m venv .venv
 .venv\Scripts\activate
 pip install -r requirements.txt
@@ -59,8 +63,9 @@ Guía completa: [`GUIA_INSTALACION.md`](GUIA_INSTALACION.md)
 
 ## ⚠️ Notas
 
-- Versión beta en pruebas: puede haber bugs.
-- Los modelos de IA se descargan a la carpeta `models/` junto al ejecutable.
+- Versión beta en pruebas: puede haber bugs. Si encuentras uno, abre un [Issue](https://github.com/hacastro-ia/editor-video/issues).
+- Los modelos de IA y la biblioteca de imágenes se guardan en `%LOCALAPPDATA%\EditorVideo\` (`models\` y `biblioteca\`), así funciona aunque el programa esté instalado en `Program Files`.
+- En la versión instalada, añade tus imágenes desde **Salida → Herramientas → «Biblioteca de imágenes…»**.
 
 ## 📄 Licencias
 
