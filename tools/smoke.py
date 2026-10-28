@@ -1,6 +1,6 @@
-"""Prueba rapida del entorno de compilacion: nms de torchvision y YOLO.
+"""Prueba rapida del entorno: nms de torchvision y YOLO.
 
-Se ejecuta en CI antes de empaquetar. Si falla aqui, el exe tambien fallaria
+Util antes de empaquetar: si falla aqui, el exe tambien fallaria
 con "operator torchvision::nms does not exist".
 """
 from __future__ import annotations

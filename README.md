@@ -63,31 +63,7 @@ Instalador: compilar `EditorVideo.iss` con Inno Setup 6 (el script está en la r
 
 Guía completa: [`GUIA_INSTALACION.md`](GUIA_INSTALACION.md)
 
-### Publicar una versión nueva
-
-Con todo ya configurado (git + Inno Setup 6), un solo comando compila y publica el Release:
-
-```powershell
-.\publicar_release.ps1 -Version 1.1 -DryRun     # solo comprueba requisitos y muestra las notas
-.\publicar_release.ps1 -Version 1.1             # compila y publica v1.1
-```
-
-Hace todo: compila el exe, compila el instalador, crea la Release en GitHub con los dos binarios y la publica. Usa las credenciales de git ya guardadas, no hace falta pegar ningún token.
-
-Las notas del Release salen automáticamente de [`CHANGELOG.md`](CHANGELOG.md): escribe los cambios en la sección **[No publicado]** y el script los incluye. Si prefieres notas propias, pásale un archivo Markdown con `-Notas .\notas_v1.1.md`.
-
-### Publicar desde GitHub (sin tu PC)
-
-GitHub Actions compila en la nube y publica el Release. Basta con subir un tag:
-
-```bash
-git tag v1.1
-git push origin v1.1
-```
-
-O a mano: **Actions → Compilar y publicar → Run workflow**. Si marcas `dry_run`, solo compila y deja los binarios como artefacto descargable, sin publicar nada.
-
-El build usa las versiones exactas de [`requirements-build.txt`](requirements-build.txt), que son las de la v1.0 probada.
+Para reproducir el build oficial usa las versiones exactas de [`requirements-build.txt`](requirements-build.txt) (`pip install -r requirements-build.txt`).
 
 ## ⚠️ Notas
 

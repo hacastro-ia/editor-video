@@ -4,13 +4,6 @@ Todos los cambios importantes de este proyecto se documentan en este archivo.
 
 El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y el versionado [SemVer](https://semver.org/lang/es/).
 
-## Cómo publicar una versión
-
-1. Escribe los cambios nuevos en la sección **[No publicado]**.
-2. Al publicar, renómbrala con la versión y la fecha: `## [1.1] - 2026-11-15`.
-3. Ejecuta `.\publicar_release.ps1 -Version 1.1` — el script lee esa sección del CHANGELOG y la usa como notas del Release.
-4. Deja **[No publicado]** vacío con sus categorías para la siguiente versión.
-
 Categorías: `Añadido`, `Cambiado`, `Obsoleto`, `Eliminado`, `Corregido`, `Seguridad`.
 
 ## [No publicado]
