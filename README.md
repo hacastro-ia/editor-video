@@ -76,6 +76,19 @@ Hace todo: compila el exe, compila el instalador, crea la Release en GitHub con 
 
 Las notas del Release salen automáticamente de [`CHANGELOG.md`](CHANGELOG.md): escribe los cambios en la sección **[No publicado]** y el script los incluye. Si prefieres notas propias, pásale un archivo Markdown con `-Notas .\notas_v1.1.md`.
 
+### Publicar desde GitHub (sin tu PC)
+
+GitHub Actions compila en la nube y publica el Release. Basta con subir un tag:
+
+```bash
+git tag v1.1
+git push origin v1.1
+```
+
+O a mano: **Actions → Compilar y publicar → Run workflow**. Si marcas `dry_run`, solo compila y deja los binarios como artefacto descargable, sin publicar nada.
+
+El build usa las versiones exactas de [`requirements-build.txt`](requirements-build.txt), que son las de la v1.0 probada.
+
 ## ⚠️ Notas
 
 - Versión beta en pruebas: puede haber bugs. Si encuentras uno, abre un [Issue](https://github.com/hacastro-ia/editor-video/issues).

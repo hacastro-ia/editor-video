@@ -1,0 +1,12 @@
+# Versiones exactas con las que se compilo y probo el ejecutable de la v1.0.
+# Se usan solo para empaquetar (CI / build local reproducible).
+# Para desarrollo normal usa requirements.txt.
+numpy==2.5.3
+opencv-python==5.0.0.93
+pillow==12.3.0
+imageio-ffmpeg==0.6.0
+sounddevice==0.5.6
+ultralytics==8.4.166
+torch==2.14.0
+torchvision==0.29.0
+pyinstaller==6.22.3
